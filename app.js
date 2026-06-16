@@ -279,8 +279,7 @@ function applyLang() {
 function init() {
   try {
     const saved = localStorage.getItem('parsed_lang');
-    if (saved && I18N[saved]) lang = saved;
-    else { const n = (navigator.language || 'en').toLowerCase(); lang = n.startsWith('zh') ? 'zh' : n.startsWith('uk') ? 'uk' : 'en'; }
+    lang = (saved && I18N[saved]) ? saved : 'en';  // English-first public face; zh/uk via switcher (persisted)
   } catch (e) {}
   applyLang();
 
