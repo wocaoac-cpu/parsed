@@ -1,0 +1,10 @@
+# dev-only / internal — never publish
+xiaomo_ask.py
+xiaomo_copy.txt
+codex_audit.log
+AUDIT_CODEX.md
+dist/
+.wrangler/
+_shot.png
+.DS_Store
+node_modules/
